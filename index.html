@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <style>
+        .weather{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align:center;
+            background-image: url("https://tse4.mm.bing.net/th?id=OIP.6wpnlZPaChlpIufyuTOrWQHaE7&pid=Api&P=0&h=180");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        @media (max-width: 476px) {
+	        .weather {
+                width:400px;
+                height:500px;
+	        }
+            .input-city{
+            padding:10px;
+            width:100px;
+            }
+         
+            .btn{
+            padding:15px;
+            width:60px;
+            }
+        }
+        .input-city{
+            padding:15px;
+            width:200px;    
+            border-radius:10px;
+            font-size:20px;
+            margin-top:100px;
+            }
+        .btn{
+            padding:15px;
+            width:60px;
+            border-radius:10px;
+            background-color: grey;
+            color:white;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather container-fluid">
+        <h1>Weather Forecast</h1>
+        <h1 class="city-name"></h1>
+        <!-- <img class="image" src=" " alt="Weather Image" width="400" height="100"> -->
+        <h2>Max-Temp</h2>
+        <h2 class="max-temp"></h2>
+        <h2>Min-Temp</h2>
+        <h2 class="min-temp"></h2>
+        <input class="input-city" type="text" id="cityInput"/>
+        <button class="btn" type="button">Go</button>
+    </div>
+    <script src="WeatherAPI.js"></script>
+</body>
+</html
