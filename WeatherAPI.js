@@ -6,7 +6,7 @@ async function getWeatherData(city){
 
 try
     {
-    const res_data = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b2c7abe45380e9c0ab82e772d65d9d23&units=metric`);
+    const res_data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b2c7abe45380e9c0ab82e772d65d9d23&units=metric`);
     if(res_data.status === 200){
         const res = await res_data.json();
         showWeatherData(res);
