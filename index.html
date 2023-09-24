@@ -10,6 +10,7 @@
             width:800px;
             height: 700px;
             border: 1px solid black;
+            border-radius:30px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -19,50 +20,70 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-        @media (max-width: 600px) {
-	        .weather {
-                width:500px;
-                height:600px;
-	        }
-            .input-city{    
-            padding:10px;
-            width:100px;
-            }
-         
-            .btn{
-            padding:15px;
-            width:60px;
-            }
-        }
         .input-city{
             padding:15px;
-            width:200px;    
+            width:200px;  
+            border:1px solid gray;  
             border-radius:10px;
             font-size:20px;
-            margin-top:100px;
+            margin-top:50px;
+            box-shadow: 2px 2px white;
             }
         .btn{
             padding:15px;
             width:60px;
+            border:1px solid gray;  
             border-radius:10px;
-            background-color: grey;
-            color:white;
+            box-shadow: 2px 2px white;
+            background-color: white;
             font-size:20px;
+        }
+        .showdata{
+            border:1px solid white;
+            border-radius: 15px;
+            width:200px;
+            margin-top:20px;
+            margin-left:290px;
+            padding:10px;
+            background:linear-gradient(white,skyblue);
+            box-shadow: 2px 2px skyblue;
+        }
+        .cloud,.temp{
+            display:inline;
+            margin-top:50px;
         }
     </style>
 </head>
 <body>
-    <div class="weather container-fluid">
-        <h1>Weather Forecast</h1>
-        <h1 class="city-name"></h1>
-        <!-- <img class="image" src=" " alt="Weather Image" width="400" height="100"> -->
-        <h2>Max-Temp</h2>
-        <h2 class="max-temp"></h2>
-        <h2>Min-Temp</h2>
-        <h2 class="min-temp"></h2>
+    <div class="weather">
+        <h1 style="color:white; font-size:50px;">Weather Forecast</h1>
+        <h1 class="city-name" style="font-size:50px;color:red"></h1>
+
+        <div>
         <input class="input-city" type="text" id="cityInput" placeholder="Enter city name"/>
         <button class="btn" type="button">Go</button>
+        </div>
+
+        <div class="divv">
+        <img class="cloud" src="https://cdn0.iconfinder.com/data/icons/simplicity/512/clouds-512.png" alt="clouds" height="40" width="40"/>
+        <h2 class="temp"><i>max-temp(Celcius)</i></h2> 
+        </div>
+        
+        <div class="showdata">  
+        <h2 class="max-temp"></h2>
+        </div>
+
+        <div class="divv">
+        <img class="cloud" src="https://cdn0.iconfinder.com/data/icons/simplicity/512/clouds-512.png" alt="clouds" height="40" width="40"/>
+        <h2 class="temp"><i>min-Temp(Celcius)</i></h2>
+        </div>
+
+        <div class="showdata">
+        <h2 class="min-temp"></h2>
+        </div>
+       
+        
     </div>
     <script src="WeatherAPI.js"></script>
 </body>
-</html
+</html>
